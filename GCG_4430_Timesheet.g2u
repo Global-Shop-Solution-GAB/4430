@@ -1,0 +1,1127 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_Timesheet..create
+Gui.F_Timesheet..caption("Timesheet Entry")
+Gui.F_Timesheet..size(9615,9240)
+Gui.F_Timesheet..position(0,0)
+Gui.F_Timesheet..event(UnLoad,f_timesheet_unload)
+Gui.F_Timesheet..forecolor(0)
+Gui.F_Timesheet..BackColor(-2147483633)
+Gui.F_Timesheet..maxbutton(False)
+Gui.F_Timesheet..mousepointer(0)
+Gui.F_Timesheet..MinX(0)
+Gui.F_Timesheet..MinY(0)
+Gui.F_Timesheet.dtpWeek.create(datepicker)
+Gui.F_Timesheet.dtpWeek.size(1935,285)
+Gui.F_Timesheet.dtpWeek.position(225,315)
+Gui.F_Timesheet.dtpWeek.event(Change,dtpdate_change)
+Gui.F_Timesheet.dtpWeek.defaultvalue("")
+Gui.F_Timesheet.dtpWeek.tabstop(True)
+Gui.F_Timesheet.dtpWeek.tabindex(1)
+Gui.F_Timesheet.cmdUpdate.create(button)
+Gui.F_Timesheet.cmdUpdate.caption("Update")
+Gui.F_Timesheet.cmdUpdate.size(855,375)
+Gui.F_Timesheet.cmdUpdate.position(1260,8100)
+Gui.F_Timesheet.cmdUpdate.event(Click,cmdupdate_click)
+Gui.F_Timesheet.cmdUpdate.disableonclick(20)
+Gui.F_Timesheet.cmdUpdate.defaultvalue("")
+Gui.F_Timesheet.cmdUpdate.tabstop(True)
+Gui.F_Timesheet.cmdUpdate.tabindex(7)
+Gui.F_Timesheet.cmdTemp.create(button)
+Gui.F_Timesheet.cmdTemp.caption("Template")
+Gui.F_Timesheet.cmdTemp.size(1005,375)
+Gui.F_Timesheet.cmdTemp.position(2265,8085)
+Gui.F_Timesheet.cmdTemp.event(Click,cmdtemp_click)
+Gui.F_Timesheet.cmdTemp.defaultvalue("")
+Gui.F_Timesheet.cmdTemp.tabstop(True)
+Gui.F_Timesheet.cmdTemp.tabindex(8)
+Gui.F_Timesheet.cmdSave.create(button)
+Gui.F_Timesheet.cmdSave.caption("Save")
+Gui.F_Timesheet.cmdSave.size(855,375)
+Gui.F_Timesheet.cmdSave.position(255,8100)
+Gui.F_Timesheet.cmdSave.event(Click,cmdsave_click)
+Gui.F_Timesheet.cmdSave.disableonclick(20)
+Gui.F_Timesheet.cmdSave.defaultvalue("")
+Gui.F_Timesheet.cmdSave.tabstop(True)
+Gui.F_Timesheet.cmdSave.tabindex(6)
+Gui.F_Timesheet.lblDate.create(label,"Select Date",True,1935,255,1,255,120,True,0,Arial,8,-2147483633,0)
+Gui.F_Timesheet.lblDate.defaultvalue("")
+Gui.F_Timesheet.cmdRefresh.create(button)
+Gui.F_Timesheet.cmdRefresh.caption("Refresh")
+Gui.F_Timesheet.cmdRefresh.size(855,375)
+Gui.F_Timesheet.cmdRefresh.position(2250,255)
+Gui.F_Timesheet.cmdRefresh.event(Click,cmdrefresh_click)
+Gui.F_Timesheet.cmdRefresh.disableonclick(20)
+Gui.F_Timesheet.cmdRefresh.defaultvalue("")
+Gui.F_Timesheet.cmdRefresh.tabstop(True)
+Gui.F_Timesheet.cmdRefresh.tabindex(2)
+Gui.F_Timesheet.txtAJob.create(textbox,"",True,1050,300,0,3485,305,False,0,Arial,8,-2147483643,1)
+Gui.F_Timesheet.txtAJob.defaultvalue("")
+Gui.F_Timesheet.txtASuff.create(textbox,"",True,570,300,0,4635,305,False,0,Arial,8,-2147483643,1)
+Gui.F_Timesheet.txtASuff.defaultvalue("")
+Gui.F_Timesheet.cmdAddJobBrows.create(button)
+Gui.F_Timesheet.cmdAddJobBrows.caption("^")
+Gui.F_Timesheet.cmdAddJobBrows.size(345,375)
+Gui.F_Timesheet.cmdAddJobBrows.position(5315,260)
+Gui.F_Timesheet.cmdAddJobBrows.event(Click,cmdaddjobbrows_click)
+Gui.F_Timesheet.cmdAddJobBrows.defaultvalue("")
+Gui.F_Timesheet.cmdAddJobBrows.tabstop(True)
+Gui.F_Timesheet.cmdAddJobBrows.tabindex(3)
+Gui.F_Timesheet.txtASeq.create(textbox,"",True,765,300,0,5870,305,False,0,Arial,8,-2147483643,1)
+Gui.F_Timesheet.txtASeq.defaultvalue("")
+Gui.F_Timesheet.cmdAddSeqBrows.create(button)
+Gui.F_Timesheet.cmdAddSeqBrows.caption("^")
+Gui.F_Timesheet.cmdAddSeqBrows.size(345,375)
+Gui.F_Timesheet.cmdAddSeqBrows.position(6750,260)
+Gui.F_Timesheet.cmdAddSeqBrows.event(Click,cmdaddseqbrows_click)
+Gui.F_Timesheet.cmdAddSeqBrows.defaultvalue("")
+Gui.F_Timesheet.cmdAddSeqBrows.tabstop(True)
+Gui.F_Timesheet.cmdAddSeqBrows.tabindex(4)
+Gui.F_Timesheet.lblASeq.create(label,"Sequence",True,855,255,1,5865,105,True,0,Arial,8,-2147483633,0)
+Gui.F_Timesheet.lblASeq.defaultvalue("")
+Gui.F_Timesheet.lblASuff.create(label,"Suffix",True,600,255,1,4635,105,True,0,Arial,8,-2147483633,0)
+Gui.F_Timesheet.lblASuff.defaultvalue("")
+Gui.F_Timesheet.lblAJob.create(label,"Job",True,735,255,1,3480,75,True,0,Arial,8,-2147483633,0)
+Gui.F_Timesheet.lblAJob.defaultvalue("")
+Gui.F_Timesheet.cmdAdd.create(button)
+Gui.F_Timesheet.cmdAdd.caption("Add")
+Gui.F_Timesheet.cmdAdd.size(855,375)
+Gui.F_Timesheet.cmdAdd.position(7220,260)
+Gui.F_Timesheet.cmdAdd.event(Click,cmdadd_click)
+Gui.F_Timesheet.cmdAdd.disableonclick(20)
+Gui.F_Timesheet.cmdAdd.defaultvalue("")
+Gui.F_Timesheet.cmdAdd.tabstop(True)
+Gui.F_Timesheet.cmdAdd.tabindex(5)
+Gui.F_Timesheet.txt_total.create(textbox,"",True,915,300,0,5580,8115,False,1,Arial,8,-2147483643,1)
+Gui.F_Timesheet.txt_total.defaultvalue("")
+Gui.F_Timesheet.txt_total.Locked(True)
+Gui.F_Timesheet.lbl_total.create(label,"Total Job Hours",True,855,405,0,4605,8145,True,2,Arial,8,-2147483633,0)
+Gui.F_Timesheet.lbl_total.defaultvalue("")
+Gui.F_Timesheet.GCGTimesheet.Create(GsGridControl)
+Gui.F_Timesheet.GCGTimesheet.Size(8910,7095)
+Gui.F_Timesheet.GCGTimesheet.Position(195,765)
+Gui.F_Timesheet.GCGTimesheet.Event(CellValueChanged,GCGTimesheet_CellValueChanged)
+Gui.F_Timesheet.GCGTimesheet.Event(RowCellClick,GCGTimesheet_RowCellClick)
+Gui.F_Timesheet.GCGTimesheet.Anchor(13)
+Gui.F_Timesheet.cmdClose.Create(Button)
+Gui.F_Timesheet.cmdClose.Size(1005,375)
+Gui.F_Timesheet.cmdClose.Position(3405,8085)
+Gui.F_Timesheet.cmdClose.TabStop(True)
+Gui.F_Timesheet.cmdClose.TabIndex(8)
+Gui.F_Timesheet.cmdClose.Caption("Close")
+Gui.F_Timesheet.cmdClose.DefaultValue("")
+Gui.F_Timesheet.cmdClose.Event(Click,cmdClose_Click)
+Gui.F_Timesheet.lbl_totalEmp.Create(Label,"Total Emp Hours",True,855,405,0,6705,8145,True,2,"Arial",8,-2147483633,0)
+Gui.F_Timesheet.lbl_totalEmp.DefaultValue("")
+Gui.F_Timesheet.txt_total2.Create(TextBox,"",True,915,300,0,7710,8130,False,1,"Arial",8,-2147483643,1)
+Gui.F_Timesheet.txt_total2.DefaultValue("")
+Gui.F_Timesheet.txt_total2.Locked(True)
+Gui.F_Template..create
+Gui.F_Template..caption("Template Entry")
+Gui.F_Template..size(5355,7485)
+Gui.F_Template..position(0,0)
+Gui.F_Template..event(UnLoad,f_template_unload)
+Gui.F_Template..forecolor(0)
+Gui.F_Template..BackColor(-2147483633)
+Gui.F_Template..maxbutton(False)
+Gui.F_Template..mousepointer(0)
+Gui.F_Template..MinX(0)
+Gui.F_Template..MinY(0)
+Gui.F_Template.lblJob.create(label,"Job",True,660,255,1,125,155,True,0,Arial,8,-2147483633,0)
+Gui.F_Template.lblJob.defaultvalue("")
+Gui.F_Template.txtTmpJob.create(textbox,"",True,1050,300,0,110,380,False,0,Arial,8,-2147483643,1)
+Gui.F_Template.txtTmpJob.defaultvalue("")
+Gui.F_Template.lblSuff.create(label,"Suffix",True,525,255,1,1280,155,True,0,Arial,8,-2147483633,0)
+Gui.F_Template.lblSuff.defaultvalue("")
+Gui.F_Template.txtTmpSuff.create(textbox,"",True,570,300,0,1270,380,False,0,Arial,8,-2147483643,1)
+Gui.F_Template.txtTmpSuff.defaultvalue("")
+Gui.F_Template.cmdTmpJobBrows.create(button)
+Gui.F_Template.cmdTmpJobBrows.caption("^")
+Gui.F_Template.cmdTmpJobBrows.size(345,375)
+Gui.F_Template.cmdTmpJobBrows.position(1960,350)
+Gui.F_Template.cmdTmpJobBrows.event(Click,cmdtmpjobbrows_click)
+Gui.F_Template.cmdTmpJobBrows.defaultvalue("")
+Gui.F_Template.lblSeq.create(label,"Sequence",True,1935,255,1,2585,155,True,0,Arial,8,-2147483633,0)
+Gui.F_Template.lblSeq.defaultvalue("")
+Gui.F_Template.txtTmpSeq.create(textbox,"",True,765,300,0,2585,380,False,0,Arial,8,-2147483643,1)
+Gui.F_Template.txtTmpSeq.defaultvalue("")
+Gui.F_Template.cmdTmpSeqBrows.create(button)
+Gui.F_Template.cmdTmpSeqBrows.caption("^")
+Gui.F_Template.cmdTmpSeqBrows.size(345,375)
+Gui.F_Template.cmdTmpSeqBrows.position(3480,350)
+Gui.F_Template.cmdTmpSeqBrows.event(Click,cmdtmpseqbrows_click)
+Gui.F_Template.cmdTmpSeqBrows.defaultvalue("")
+Gui.F_Template.cmdTmpAdd.create(button)
+Gui.F_Template.cmdTmpAdd.caption("Add")
+Gui.F_Template.cmdTmpAdd.size(855,375)
+Gui.F_Template.cmdTmpAdd.position(110,830)
+Gui.F_Template.cmdTmpAdd.event(Click,cmdtmpadd_click)
+Gui.F_Template.cmdTmpAdd.defaultvalue("")
+Gui.F_Template.cmdTmpDelete.create(button)
+Gui.F_Template.cmdTmpDelete.caption("Delete")
+Gui.F_Template.cmdTmpDelete.size(855,375)
+Gui.F_Template.cmdTmpDelete.position(1070,815)
+Gui.F_Template.cmdTmpDelete.event(Click,cmdtmpdelete_click)
+Gui.F_Template.cmdTmpDelete.defaultvalue("")
+Gui.F_Template.cmdTmpDeleteAll.create(button)
+Gui.F_Template.cmdTmpDeleteAll.caption("Delete All")
+Gui.F_Template.cmdTmpDeleteAll.size(1110,435)
+Gui.F_Template.cmdTmpDeleteAll.position(150,6315)
+Gui.F_Template.cmdTmpDeleteAll.event(Click,cmdtmpdeleteall_click)
+Gui.F_Template.cmdTmpDeleteAll.defaultvalue("")
+Gui.F_Template.GsGTemp.Create(GsGridControl)
+Gui.F_Template.GsGTemp.Size(4740,4725)
+Gui.F_Template.GsGTemp.Position(165,1395)
+Gui.F_Template.GsGTemp.Event(RowCellClick,GsGTemp_RowClick)
+Gui.F_Template.GsGTemp.Anchor(13)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.dDate.Declare(Date,1/1/1900)
+Variable.Global.sDetl.Declare(String)
+Variable.Global.sTA.Declare(String)
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+'Coded by: MLA
+'Project Start Date: 3/31/2011
+'Notes:
+'  Northern Power
+
+'Modified by: WAW
+'Modification date: 05/1/2017
+'Modifications include: 
+'''1. Adding an additional column to the flexgrid on the ?Timesheet Entry? screen that will show the total hours that employee has worked for that particular day. This will need to come from the Time and Attendance Records.
+''2. Having a validation check to the templates that will delete the template if the job associated with it has been purged to history. Currently, the employees are able to charge time to purged job and the customer does not want this to be an option.
+''3. An additional column will be added to show whether or not the sequence has been closed.
+''4. Add the ability to close the Sequence from the Time Sheet.
+
+v.Local.suploadtypes.declare(string)
+v.Local.suploaddata.Declare(String)
+v.Local.selements.Declare(String)
+
+'create the upload datatable
+v.Local.suploadtypes.set("string*!*string*!*string*!*string")
+v.Local.suploaddata.Set("*!**!**!*")
+V.Local.sElements.Set("Job*!*Suffix*!*Seq*!*Desc")
+F.Data.DataTable.CreateFromString("Template",v.Local.sUploadData,V.Local.sElements,V.Local.suploadtypes,"*!*","@!@",True)
+f.Data.DataTable.DeleteRow("TEMPLATE")
+
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass,7200)
+
+V.Global.dDate.Set(V.Screen.F_Timesheet!dtpWeek.Value)
+F.Intrinsic.Control.CallSub(Gridload)
+Gui.F_Timesheet..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.dtpweek_change.Start
+V.Local.sError.Declare(String)
+V.Local.dDate.Declare(Date)
+
+F.Intrinsic.Control.SetErrorHandler("dtpWeekChange_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.dDate.Set(V.Screen.F_Timesheet!dtpWeek.Value)
+F.Intrinsic.Date.BeginningOfWeek(V.Local.dDate,V.Local.dDate)
+Gui.F_Timesheet.dtpWeek.Value(V.Local.dDate)
+V.Global.dDate.Set(V.Screen.F_Timesheet!dtpWeek.Value)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("dtpWeekChange_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.dtpweek_change.End
+
+Program.Sub.f_timesheet_unload.Start
+F.Intrinsic.Control.SetErrorHandler("f_timesheet_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!con.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("f_timesheet_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.f_timesheet_unload.End
+
+Program.Sub.cmdrefresh_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdrefresh_click_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.CallSub(Gridload)
+
+Gui.F_Timesheet..Visible(True)
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("cmdrefresh_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdrefresh_click.End
+
+Program.Sub.GridLoad.Start
+F.Intrinsic.Control.SetErrorHandler("GridLoad_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+V.Local.bret.Declare(boolean)
+V.Local..BulkDeclareString(sEmpNo, ssql, sRet, sDate)
+V.Local.iC.Declare(Long)
+
+'F.Intrinsic.UI.InvokeWaitDialog("Loading Timesheet Grid...")
+
+''''clear from templates where the JOBS have been purged to history
+V.Local.ssql.Set("SELECT ATT.JOB, ATT.SUFFIX from ATG_TIMESHEET_TEMP ATT inner join V_JOB_HIST_MAST JHM on ATT.JOB = JHM.JOB and ATT.SUFFIX = JHM.SUFFIX")
+F.Data.DataTable.CreateFromSQL("D", "con", V.Local.ssql)
+F.Intrinsic.Control.For(V.Local.iC, 0, V.DataTable.D.RowCount--, 1)
+	F.Intrinsic.String.Build("Delete From ATG_TIMESHEET_TEMP Where JOB = '{0}' And SUFFIX = '{1}'", V.DataTable.D(V.Local.iC).JOB!FieldValTrim, V.DataTable.D(V.Local.iC).SUFFIX!FieldValTrim, V.Local.ssql)
+	F.ODBC.Connection!con.Execute(V.Local.ssql)
+F.Intrinsic.Control.Next(V.Local.iC)
+F.Data.DataTable.Close("D")
+
+F.Intrinsic.Control.If(V.DataTable.TIMESHEETGRID.Exists,=,True)
+	F.Data.DataTable.Close("TIMESHEETGRID")
+F.Intrinsic.Control.EndIf
+
+F.Global.Security.GetEmpNoFromUser(V.Caller.User,V.Local.sEmpNo)
+
+F.Intrinsic.String.Build("Select JOB, SUFFIX, SEQ, '' As Description ,SUN_HRS, UPDATED from ATG_TIMESHEET where USER_ID = '{0}' and BEG_WEEK = '{1}'",v.Caller.user,V.Global.dDate.PervasiveDate,V.Local.sSql)
+F.Data.DataTable.CreateFromSQL("TIMESHEETGRID","con",v.Local.sSql,true)
+'check if this table is empty- if it is then pull grid in from template database ATG_TIMESHEET_TEMP
+F.Intrinsic.Control.If(V.DataTable.TIMESHEETGRID.rowcount,=,0)
+	F.Data.DataTable.Close("TIMESHEETGRID")
+	F.Intrinsic.String.Build("Select JOB, SUFFIX, SEQ, '' As Description,0.0 As SUN_HRS, '' As UPDATED from ATG_TIMESHEET_TEMP where USER_ID = '{0}'",V.Caller.user,V.Local.sSql)
+	F.Data.DataTable.CreateFromSQL("TIMESHEETGRID","con",v.Local.sSql,true)
+Function.Intrinsic.Control.EndIf
+
+F.Data.DataTable.AddColumn("TIMESHEETGRID","Open/Closed",String)
+F.Data.DataTable.AddColumn("TIMESHEETGRID","Close",Boolean, False)
+
+'add the closed flag, description and Close check value
+F.Intrinsic.Control.For(V.Local.iC, 0, V.DataTable.TIMESHEETGRID.RowCount--, 1)
+	F.Intrinsic.String.Build("Select FLAG_CLOSED from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}'",V.DataTable.TIMESHEETGRID(V.Local.iC).JOB!fieldvaltrim,V.DataTable.TIMESHEETGRID(V.Local.iC).SUFFIX!fieldvaltrim,V.DataTable.TIMESHEETGRID(V.Local.iC).SEQ!fieldvaltrim,V.Local.ssql)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.ssql, V.Local.sRet)
+	Function.Intrinsic.Control.If(V.Local.sRet, =, "Y")
+		F.Data.DataTable.SetValue("TIMESHEETGRID",v.Local.iC,"Open/Closed","Closed")
+		F.Data.DataTable.SetValue("TIMESHEETGRID",v.Local.iC,"Close",True)
+	Function.Intrinsic.Control.Else
+		F.Data.DataTable.SetValue("TIMESHEETGRID",v.Local.iC,"Open/Closed","Open")
+	Function.Intrinsic.Control.EndIf
+	F.Intrinsic.String.Build("Select DESCRIPTION from V_JOB_OPERATIONS_WC where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}'",V.DataTable.TIMESHEETGRID(V.Local.iC).JOB!fieldvaltrim,V.DataTable.TIMESHEETGRID(V.Local.iC).SUFFIX!fieldvaltrim,V.DataTable.TIMESHEETGRID(V.Local.iC).SEQ!fieldvaltrim,V.Local.sSql)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.ssql, V.Local.sRet)
+	F.Data.DataTable.SetValue("TIMESHEETGRID",v.Local.iC,"DESCRIPTION",V.Local.sRet)
+F.Intrinsic.Control.Next(V.Local.iC)		
+
+'get the clock in/out hours for this day
+F.Intrinsic.String.Build("Select SUM(HOURS_HH + (HOURS_MM/60)) as EMP_HRS from V_TIME_ATTENDANCE where EMPLOYEE = '{0}' and CHARGE_DATE = '{1}'",v.Local.sempno,V.Global.dDate.PervasiveDate,V.Local.sSql)
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSql,V.Local.sRet)
+GUI.F_Timesheet.txt_total2.text(V.Local.sRet)
+
+'get what they have recorded
+F.Intrinsic.String.Format(V.Screen.F_Timesheet!dtpWeek.Value,"YYYY-MM-DD",V.Local.sDate)
+F.Intrinsic.String.Build("Select SUM(SUN_HRS) As HRS From ATG_TIMESHEET WHERE USER_ID = '{0}' AND BEG_WEEK = '{1}'", V.Caller.User,V.Local.sDate,V.Local.sSql)
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSql,V.Local.sRet)
+GUI.F_Timesheet.txt_total.Text(V.Local.sRet)
+
+'call the formatting sub
+F.Intrinsic.Control.CallSub(formatgrid)
+
+'F.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("GridLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+Program.Sub.GridLoad.End
+
+Program.Sub.cmdaddjobbrows_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdaddjobbrows_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitle.Declare(String)
+V.Local.sWidth.Declare(String)
+V.Local.sRet.Declare(String)
+
+V.Local.sTitle.Set("Job*!*Suffix*!*Part*!*Description")
+V.Local.sWidth.Set("1200*!*700*!*2200*!*2700")
+V.Local.sSql.Set("Select JOB, SUFFIX, PART, DESCRIPTION from V_JOB_HEADER ORDER BY JOB, SUFFIX")
+
+F.Intrinsic.String.Split(V.Local.sTitle,"*!*",V.Local.sTitle)
+F.Intrinsic.String.Split(V.Local.sWidth,"*!*",V.Local.sWidth)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select Job","con",V.Local.sSql,V.Local.sTitle,V.Local.sWidth,8000,8000,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_Timesheet.txtAJob.Text(V.Local.sRet(0))
+	Gui.F_Timesheet.txtASuff.Text(V.Local.sRet(1))
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdaddjobbrows_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdaddjobbrows_click.End
+
+Program.Sub.cmdaddseqbrows_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdaddseqbrows_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitle.Declare(String)
+V.Local.sWidth.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_Timesheet!txtAJob.Text,=,"")
+	F.Intrinsic.UI.Msgbox("No job selected!","Select Job")
+F.Intrinsic.Control.Else
+	V.Local.sTitle.Set("Sequence*!*Workcenter*!*Description")
+	V.Local.sWidth.Set("1200*!*1000*!*4800")
+
+	F.Intrinsic.String.Split(V.Local.sTitle,"*!*",V.Local.sTitle)
+	F.Intrinsic.String.Split(V.Local.sWidth,"*!*",V.Local.sWidth)
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.String.Concat("Select SEQ, PART, DESCRIPTION from V_JOB_OPERATIONS where JOB = '",V.Screen.F_Timesheet!txtAJob.Text,"' and SUFFIX = '",V.Screen.F_Timesheet!txtASuff.Text,"' and LMO = 'L' order by SEQ",V.Local.sSql)
+	F.Intrinsic.UI.Browser("Select Sequence","con",V.Local.sSql,V.Local.sTitle,V.Local.sWidth,8000,8000,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		Gui.F_Timesheet.txtASeq.Text(V.Local.sRet(0))
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdaddseqbrows_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdaddseqbrows_click.End
+
+Program.Sub.cmdadd_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdadd_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+v.Local.suser.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_Timesheet!txtAJob.Text,=,"")
+	F.Intrinsic.UI.Msgbox("No job selected to save!","Add Job")
+F.Intrinsic.Control.ElseIf(V.Screen.F_Timesheet!txtASeq.Text,=,"")
+	F.Intrinsic.UI.Msgbox("No sequence selected to save!","Add Sequence")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat("Select * from ATG_TIMESHEET where USER_ID = '",V.caller.User,"' and JOB = '",V.Screen.F_Timesheet!txtAJob.Text,"' and SUFFIX = '",V.Screen.F_Timesheet!txtASuff.Text,"' and SEQ = '",V.Screen.F_Timesheet!txtASeq.Text,"' and BEG_WEEK = '",V.Global.dDate.PervasiveDate,"'",V.Local.sSql)
+	F.ODBC.Connection!con.OpenRecordsetRW("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+		F.ODBC.con!rst.AddNew
+		F.ODBC.con!rst.Set!USER_ID(V.Caller.User)
+		F.ODBC.con!rst.Set!JOB(V.Screen.F_Timesheet!txtAJob.Text)
+		F.ODBC.con!rst.Set!SUFFIX(V.Screen.F_Timesheet!txtASuff.Text)
+		F.ODBC.con!rst.Set!SEQ(V.Screen.F_Timesheet!txtASeq.Text)
+		F.ODBC.con!rst.Set!BEG_WEEK(V.Global.dDate.PervasiveDate)
+		F.ODBC.con!rst.Set!SUN_HRS(0)
+		F.ODBC.con!rst.Set!UPDATED(0)
+		F.ODBC.con!rst.Update
+		F.ODBC.con!rst.Close
+		Gui.F_Timesheet.txtAJob.Text("")
+		Gui.F_Timesheet.txtASuff.Text("")
+		Gui.F_Timesheet.txtASeq.Text("")
+		F.Intrinsic.Control.CallSub(Gridload)
+	F.Intrinsic.Control.Else
+		F.ODBC.con!rst.Close
+		F.Intrinsic.UI.Msgbox("Job sequence already exists on timesheet!","Save Error")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+gui.F_Timesheet..Visible(true)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdadd_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdadd_click.End
+
+Program.Sub.cmdtemp_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdtemp_click_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+V.Local..BulkDeclareString(ssql, sRet)
+V.Local..BulkDeclareLong(iC)
+
+Gui.F_Timesheet..Visible(false)
+F.Intrinsic.Control.If(V.DataTable.TEMPLATE.Exists,=,True)
+	F.Data.DataTable.Close("TEMPLATE")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("Select JOB, SUFFIX, SEQ, '' As DESC1 From ATG_TIMESHEET_TEMP where USER_ID = '{0}' Order By JOB, SUFFIX, SEQ",V.Caller.User, V.Local.sSql)
+F.Data.DataTable.CreateFromSQL("TEMPLATE", "con", V.Local.sSql, True)
+F.Intrinsic.Control.For(V.Local.iC, 0, V.DataTable.TEMPLATE.RowCount--, 1)
+	F.Intrinsic.String.Build("Select DESCRIPTION from V_JOB_OPERATIONS_WC where JOB = '{0}' And SUFFIX = '{1}' And SEQ = '{2}'", V.DataTable.TEMPLATE(V.Local.iC).JOB!FieldValTrim, V.DataTable.TEMPLATE(V.Local.iC).SUFFIX!FieldValTrim, V.DataTable.TEMPLATE(V.Local.iC).SEQ!FieldValTrim, V.Local.sSql)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.ssql, V.Local.sRet)
+	F.Data.DataTable.SetValue("TEMPLATE",v.Local.iC,"DESC1",V.Local.sRet)
+F.Intrinsic.Control.Next(V.Local.iC)
+gui.F_Template.GsGTemp.AddGridviewFromDataTable("GRID_T","TEMPLATE")
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","JOB","Caption","Job")
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","JOB","HeaderFontBold",True)
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","JOB","ReadOnly",true)
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","Suffix","Caption","Suffix")
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","Suffix","HeaderFontBold",True)
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","Suffix","Readonly",true)
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","SEQ","Caption","Seq")
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","SEQ","HeaderFontBold",True)
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","SEQ","Readonly",true)
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","DESC1","Caption","Desc")
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","DESC1","HeaderFontBold",True)
+gui.F_Template.GsGTemp.SetColumnProperty("GRID_T","DESC1","allowedit",true)
+gui.F_Template.GsGTemp.SetGridviewProperty("GRID_T","Readonly",true)
+gui.F_Template.GsGTemp.SetGridviewProperty("GRID_T","editable",false)
+gui.F_Template.GsGTemp.MainView("GRID_T")
+Gui.F_Template..Show
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("cmdtemp_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+		f.Intrinsic.Control.CallSub(f_timesheet_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdtemp_click.End
+
+Program.Sub.f_template_unload.Start
+F.Intrinsic.Control.SetErrorHandler("f_template_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+Gui.F_Template..Visible(False)
+Gui.F_Template.txtTmpJob.Text("")
+Gui.F_Template.txtTmpSeq.Text("")
+Gui.F_Template.txtTmpSuff.Text("")
+F.Intrinsic.Control.CallSub(Gridload)
+Gui.F_Timesheet..Visible(True)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("f_template_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+Program.Sub.f_template_unload.End
+
+Program.Sub.cmdtmpjobbrows_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdtmpjobbrows_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitle.Declare(String)
+V.Local.sWidth.Declare(String)
+V.Local.sRet.Declare(String)
+
+V.Local.sTitle.Set("Job*!*Suffix*!*Part*!*Description")
+V.Local.sWidth.Set("1200*!*700*!*2200*!*2700")
+V.Local.sSql.Set("Select JOB, SUFFIX, PART, DESCRIPTION from V_JOB_HEADER ORDER BY JOB, SUFFIX")
+
+F.Intrinsic.String.Split(V.Local.sTitle,"*!*",V.Local.sTitle)
+F.Intrinsic.String.Split(V.Local.sWidth,"*!*",V.Local.sWidth)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select Job","con",V.Local.sSql,V.Local.sTitle,V.Local.sWidth,8000,8000,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_Template.txtTmpJob.Text(V.Local.sRet(0))
+	Gui.F_Template.txtTmpSuff.Text(V.Local.sRet(1))
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdtmpjobbrows_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdtmpjobbrows_click.End
+
+Program.Sub.cmdtmpseqbrows_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdtmpseqbrows_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitle.Declare(String)
+V.Local.sWidth.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_Template!txtTmpJob.Text,=,"")
+	F.Intrinsic.UI.Msgbox("No job selected!","Select Job")
+F.Intrinsic.Control.Else
+	V.Local.sTitle.Set("Sequence*!*Workcenter*!*Description")
+	V.Local.sWidth.Set("1200*!*1000*!*4800")
+
+	F.Intrinsic.String.Split(V.Local.sTitle,"*!*",V.Local.sTitle)
+	F.Intrinsic.String.Split(V.Local.sWidth,"*!*",V.Local.sWidth)
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.String.Concat("Select SEQ, PART, DESCRIPTION from V_JOB_OPERATIONS where JOB = '",V.Screen.F_Template!txtTmpJob.Text,"' and SUFFIX = '",V.Screen.F_Template!txtTmpSuff.Text,"' and LMO = 'L' order by SEQ",V.Local.sSql)
+	F.Intrinsic.UI.Browser("Select Sequence","con",V.Local.sSql,V.Local.sTitle,V.Local.sWidth,8000,8000,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		Gui.F_Template.txtTmpSeq.Text(V.Local.sRet(0))
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdtmpseqbrows_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdtmpseqbrows_click.End
+
+Program.Sub.cmdtmpadd_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdtmpadd_click_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_Template!txtTmpJob.Text,=,"")
+	F.Intrinsic.UI.Msgbox("No job selected to save!","Save Job")
+F.Intrinsic.Control.ElseIf(V.Screen.F_Template!txtTmpSeq.Text,=,"")
+	F.Intrinsic.UI.Msgbox("No sequence selected to save!","Save Sequence")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat("Select * from ATG_TIMESHEET_TEMP where USER_ID = '",V.Caller.User,"' and JOB = '",V.Screen.F_Template!txtTmpJob.Text,"' and SUFFIX = '",V.Screen.F_Template!txtTmpSuff.Text,"' and SEQ = '",V.Screen.F_Template!txtTmpSeq.Text,"'",V.Local.sSql)
+	F.ODBC.Connection!con.OpenRecordsetRW("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+		F.ODBC.con!rst.AddNew
+		F.ODBC.con!rst.Set!USER_ID(V.Caller.User)
+		F.ODBC.con!rst.Set!JOB(V.Screen.F_Template!txtTmpJob.Text)
+		F.ODBC.con!rst.Set!SUFFIX(V.Screen.F_Template!txtTmpSuff.Text)
+		F.ODBC.con!rst.Set!SEQ(V.Screen.F_Template!txtTmpSeq.Text)
+		F.ODBC.con!rst.Update
+		Gui.F_Template.txtTmpJob.Text("")
+		Gui.F_Template.txtTmpSuff.Text("")
+		Gui.F_Template.txtTmpSeq.Text("")
+		F.ODBC.con!rst.Close
+		F.Intrinsic.Control.CallSub(cmdtemp_click)
+	F.Intrinsic.Control.Else
+		F.ODBC.con!rst.Close
+		F.Intrinsic.UI.Msgbox("Job sequence already exists on template!","Sequence Exists")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdtmpadd_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdtmpadd_click.End
+
+Program.Sub.cmdtmpdelete_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdtmpdelete_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_Template!txtTmpJob.Text,=,"")
+	F.Intrinsic.UI.Msgbox("No job selected to delete!","Delete Job")
+F.Intrinsic.Control.ElseIf(V.Screen.F_Template!txtTmpSeq.Text,=,"")
+	F.Intrinsic.UI.Msgbox("No sequence selected to delete!","Delete Sequence")
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Are you sure you want to delete this record from template?","Delete Record",4,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,=,"6")
+		F.Intrinsic.String.Concat("Delete from ATG_TIMESHEET_TEMP where USER_ID = '",V.Caller.User,"' and JOB = '",V.Screen.F_Template!txtTmpJob.Text,"' and SUFFIX = '",V.Screen.F_Template!txtTmpSuff.Text,"' and SEQ = '",V.Screen.F_Template!txtTmpSeq.Text,"'",V.Local.sSql)
+		F.ODBC.Connection!con.Execute(V.Local.sSql)
+		Gui.F_Template.txtTmpJob.Text("")
+		Gui.F_Template.txtTmpSuff.Text("")
+		Gui.F_Template.txtTmpSeq.Text("")
+		F.Intrinsic.Control.CallSub(cmdtemp_click)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdtmpdelete_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdtmpdelete_click.End
+
+Program.Sub.cmdtmpdeleteall_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdtmpdeleteall_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.Msgbox("This will delete your entire template, are you sure?","Delete Template",4,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"6")
+	F.Intrinsic.String.Concat("Delete ATG_TIMESHEET_TEMP where USER_ID = '",V.Caller.User,"'",V.Local.sSql)
+	F.ODBC.Connection!con.Execute(V.Local.sSql)
+	Gui.F_Template.txtTmpJob.Text("")
+	Gui.F_Template.txtTmpSuff.Text("")
+	Gui.F_Template.txtTmpSeq.Text("")
+	F.Intrinsic.Control.CallSub(cmdtemp_click)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdtmpdeleteall_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdtmpdeleteall_click.End
+
+Program.Sub.cmdsave_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.sSql.Declare(String)
+V.Local.iRow.Declare(Long)
+V.Local.sRow.Declare(String)
+V.Local.sRowArray.Declare(String)
+'Modified by Deni Y 11/25/20, turned off command(s) below since it's flagged as error by GABErrorScanner
+'Gui.F_Timesheet.gsfgTimesheet.Commit
+
+F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.TIMESHEETGRID.rowcount--,1)
+	f.Intrinsic.String.Build("Select * from ATG_TIMESHEET where USER_ID = '{0}' and JOB = '{1}' and SUFFIX = '{2}' AND SEQ = '{3}' AND BEG_WEEK = '{4}'",V.Caller.User,v.DataTable.TIMESHEETGRID(v.Local.i).JOB.fieldvaltrim,v.DataTable.TIMESHEETGRID(v.Local.i).SUFFIX.fieldvaltrim,v.DataTable.TIMESHEETGRID(v.Local.i).SEQ.fieldvaltrim,v.Global.dDate.PervasiveDate,v.Local.sSql)
+	F.ODBC.Connection!con.OpenRecordsetRW("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+		F.ODBC.con!rst.AddNew
+		F.ODBC.con!rst.Set!USER_ID(V.Caller.User)
+		F.ODBC.con!rst.Set!JOB(v.DataTable.TIMESHEETGRID(v.Local.i).JOB.fieldvaltrim)
+		F.ODBC.con!rst.Set!SUFFIX(v.DataTable.TIMESHEETGRID(v.Local.i).SUFFIX.fieldvaltrim)
+		F.ODBC.con!rst.Set!SEQ(v.DataTable.TIMESHEETGRID(v.Local.i).SEQ.fieldvaltrim)
+		F.ODBC.con!rst.Set!BEG_WEEK(V.Global.dDate.PervasiveDate)
+		F.ODBC.con!rst.Set!SUN_HRS(v.DataTable.TIMESHEETGRID(v.Local.i).SUN_HRS.fieldval)
+		F.ODBC.con!rst.Set!UPDATED(0)
+		F.ODBC.con!rst.Update
+	F.Intrinsic.Control.Else
+		F.ODBC.con!rst.Set!SUN_HRS(v.DataTable.TIMESHEETGRID(v.Local.i).SUN_HRS.fieldval)
+		F.ODBC.con!rst.Set!UPDATED(0)
+		F.ODBC.con!rst.Update
+	F.Intrinsic.Control.EndIf
+	F.ODBC.con!rst.Close
+
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.UI.Msgbox("All records saved!","Save Records")
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("cmdsave_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdsave_click.End
+
+Program.Sub.cmdupdate_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdupdate_click_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+V.Local..BulkDeclareString(ssql, sEmp, sDate, sRet, sHrs, sStartHH, sStartMM, sStopHH, sStopMM, sStart, sStop, sExecute, sFile)
+V.Local..BulkDeclareLong(iRet, iC)
+V.Global.sTA.Set("")
+V.Global.sDetl.Set("")
+
+Gui.F_Timesheet.dtpWeek.Enabled(False)
+F.Intrinsic.UI.Msgbox("Are you sure you want to post the hours for these days to Global Shop?","Update Records",4,V.Local.iRet)
+F.Intrinsic.Control.CallSub(Cmdsave_click)
+F.Intrinsic.Control.If(V.Local.iRet,=,6)
+	F.Intrinsic.String.Build("Select * from ATG_TIMESHEET where USER_ID = '{0}' And BEG_WEEK = '{1}' And SUN_HRS <> 0.0",V.Caller.User,V.Global.dDate.PervasiveDate,V.Local.sSql)
+	F.Data.DataTable.CreateFromSQL("T", "con", V.Local.sSql)
+	Function.Intrinsic.Control.If(V.DataTable.T.RowCount, =, 0)
+		F.Intrinsic.UI.Msgbox("No saved records to update!","Save Records")
+		Function.Intrinsic.Control.ExitSub
+	Function.Intrinsic.Control.Else
+		F.Intrinsic.UI.InvokeWaitDialog("Loading records to Global Shop!","Update")
+		F.Global.Security.GetEmpNoFromUser(V.Caller.User,V.Local.sEmp)
+		F.Intrinsic.String.Format(V.Global.dDate,"MMDDYY",V.Local.sDate)
+		'update ATG_TIMESHEET
+		F.Intrinsic.String.Build("Update ATG_TIMESHEET Set UPDATED = '1' Where USER_ID = '{0}' And BEG_WEEK = '{1}'", V.Caller.User, V.Global.dDate.PervasiveDate, V.Local.ssql)
+		F.ODBC.Connection!con.Execute(V.Local.ssql)
+		'get the time to start job
+		F.Intrinsic.String.Build("Select Top 1 TIME_IN  As Start1 from V_TIME_ATTENDANCE where EMPLOYEE = '{0}' and CHARGE_DATE = '{1}'",V.Local.sEmp,V.Global.dDate.PervasiveDate,V.Local.sSql)
+		F.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSql,v.Local.sRet)
+		Function.Intrinsic.Control.If(V.Local.sRet, =, "")
+		'sStartHH, sStartMM, sStopHH, sStopMM)
+			'then start at 0001
+			V.Local.sStartHH.Set("00")
+			V.Local.sStartMM.Set("01")	
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.String.Split(V.Local.sRet, " ", V.Local.sRet)
+			F.Intrinsic.String.Split(V.Local.sRet(1), ":", V.Local.sStart)
+			V.Local.sStartHH.Set(V.Local.sStart(0))
+			V.Local.sStartMM.Set(V.Local.sStart(1))
+			Function.Intrinsic.Control.If(V.Local.sRet(2), =, "PM")
+				Function.Intrinsic.Control.If(V.Local.sStartHH, <>, "12")
+					'then add 12 to sStartHH
+					F.Intrinsic.Math.Add(V.Local.sStartHH, 12, V.Local.sStartHH)
+				Function.Intrinsic.Control.EndIf
+			Function.Intrinsic.Control.EndIf
+		Function.Intrinsic.Control.EndIf
+		'V.Global.sDetl create file
+		F.Intrinsic.Control.For(V.Local.iC, 0,V.DataTable.T.RowCount--, 1)
+		V.Local.sStart.Redim(0,0)
+			'add hours to start time for stop time
+			'convert if decimal to HHMM
+			F.Intrinsic.String.Split(V.DataTable.T(V.Local.iC).SUN_HRS!FieldVal, ".", V.Local.sHrs)
+			Function.Intrinsic.Control.If(V.Local.sHrs.UBound, =, 0)
+				F.Intrinsic.Math.Add(V.Local.sHrs(0), V.Local.sStartHH, V.Local.sStopHH)
+				V.Local.sStopMM.Set(V.Local.sStartMM)
+			Function.Intrinsic.Control.Else
+				F.Intrinsic.Math.Add(V.Local.sHrs(0), V.Local.sStartHH, V.Local.sStopHH)
+				F.Intrinsic.String.Build(".{0}", V.Local.sHrs(1), V.Local.sRet)
+				F.Intrinsic.Math.Mult(V.Local.sRet, 60, V.Local.sRet)
+				F.Intrinsic.Math.Add(V.Local.sStartMM, V.Local.sRet, V.Local.sStopMM)
+				Function.Intrinsic.Control.If(V.Local.sStopMM, >, 59)
+					F.Intrinsic.Math.Sub(V.Local.sStopMM, 60, V.Local.sStopMM)
+					F.Intrinsic.Math.Add(V.Local.sStopHH, 1, V.Local.sStopHH)
+				Function.Intrinsic.Control.EndIf
+			Function.Intrinsic.Control.EndIf
+			F.Intrinsic.String.Format(V.Local.sStartHH,"00",V.Local.sStartHH)
+			F.Intrinsic.String.Format(V.Local.sStartMM,"00",V.Local.sStartMM)
+			F.Intrinsic.String.Format(V.Local.sStopHH,"00",V.Local.sStopHH)
+			F.Intrinsic.String.Format(V.Local.sStopMM,"00",V.Local.sStopMM)
+			F.Intrinsic.String.Build("{0}{1}", V.Local.sStartHH, V.Local.sStartMM, V.Local.sStart)
+			F.Intrinsic.String.Build("{0}{1}", V.Local.sStopHH, V.Local.sStopMM, V.Local.sStop)
+			F.Intrinsic.String.Build("Select WORKCENTER from V_JOB_OPERATIONS_WC where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}'",V.DataTable.T(V.Local.iC).JOB!FieldVal, V.DataTable.T(V.Local.iC).Suffix!FieldVal, V.DataTable.T(V.Local.iC).SEQ!FieldVal,V.Local.sSql)
+			F.ODBC.Connection!con.ExecuteAndReturn(V.Local.ssql, V.Local.sRet)
+			F.Intrinsic.String.Format(V.DataTable.T(V.Local.iC).SUN_HRS!FieldVal, "#0.0000",V.Local.sHrs)
+			F.Intrinsic.String.Build("{1}{2}{0}{3}{0}{4}{0}{5}{0}{6}{0}{7}{0}{8}{0}{9}{0}{10}{0}{11}{0}{12}{0}{0}{13}{0}{14}{0}{15}{0}{16}",V.Ambient.Tab, V.Global.sDetl,V.Local.sDate,V.Local.sEmp,V.DataTable.T(V.Local.iC).JOB!FieldVal, V.DataTable.T(V.Local.iC).Suffix!FieldVal, V.DataTable.T(V.Local.iC).SEQ!FieldVal, V.Local.sRet.Trim, V.Local.sHrs, "", "D", V.Local.sStart, V.Local.sStop, "", "0", "0", V.Ambient.NewLine, V.Global.sDetl)
+			'stop time is new start time
+			V.Local.sStartHH.Set(V.Local.sStopHH)
+			V.Local.sStartMM.Set(V.Local.sStopMM)
+		
+		F.Intrinsic.Control.Next(V.Local.iC)
+		
+		'V.Global.sDetl
+		F.Intrinsic.String.Concat(V.Caller.FilesDir,"\",V.Caller.CompanyCode,V.Caller.Terminal,"MOPEN.txt",V.Local.sFile)
+		F.Intrinsic.File.String2File(V.Local.sFile,V.Global.sDetl)
+		F.Intrinsic.String.Concat(V.Caller.CompanyCode,V.Caller.Terminal,"MOPEN.txt",V.Local.sExecute)
+		F.Intrinsic.Task.LaunchGSSSync("JB0455","-c",V.Local.sExecute)
+
+		F.Intrinsic.Control.CallSub(Gridload)
+		F.Intrinsic.UI.CloseWaitDialog
+	Gui.F_Timesheet.dtpWeek.Enabled(True)
+	F.Intrinsic.Control.EndIf	
+Function.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("cmdupdate_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdupdate_click.End
+
+Program.Sub.dtpdate_change.Start
+F.Intrinsic.Control.SetErrorHandler("dtpdate_change_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Global.dDate.Set(V.Screen.F_Timesheet!dtpWeek.Value)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("dtpdate_change_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)	
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.dtpdate_change.End
+
+Program.Sub.FormatGrid.Start
+F.Intrinsic.Control.SetErrorHandler("FormatGrid_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+v.Local.i.Declare(long)
+
+'create the dataview
+f.data.dataview.create("TIMESHEETGRID","TIMESHEETGRID")
+gui.F_Timesheet.GCGTimesheet.AddGridviewFromDataview("TIMESHEETGRID","TIMESHEETGRID","TIMESHEETGRID")
+gui.F_Timesheet.GCGTimesheet.SetGridviewProperty("TIMESHEETGRID","Editable",True)
+gui.F_Timesheet.GCGTimesheet.SetGridviewProperty("TIMESHEETGRID","ReadOnly",False)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","JOB","Caption","Job")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","JOB","HeaderFontBold",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","JOB","Readonly",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","JOB","AllowEdit",False)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","JOB","MinWidth","65")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","JOB","MaxWidth","65")
+
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Suffix","Caption","Suffix")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Suffix","HeaderFontBold",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Suffix","Readonly",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Suffix","AllowEdit",False)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Suffix","MAXwidth","55")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Suffix","MinWidth","55")
+
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Seq","Caption","Seq")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Seq","HeaderFontBold",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Seq","Readonly",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Seq","AllowEdit",False)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Seq","maxwidth","55")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Seq","minwidth","55")
+
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Description","Caption","Description")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Description","HeaderFontBold",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Description","Readonly",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Description","AllowEdit",False)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Description","Maxwidth","160")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Description","MinWidth","160")
+
+
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","SUN_HRS","Caption","Job Hrs")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","SUN_HRS","HeaderFontBold",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","SUN_HRS","Readonly",false)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","SUN_HRS","AllowEdit",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","SUN_HRS","Maxwidth","65")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","SUN_HRS","MinWidth","65")
+
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Open/Closed","Caption","Status")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Open/Closed","HeaderFontBold",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Open/Closed","Readonly",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Open/Closed","AllowEdit",False)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Open/Closed","Maxwidth","55")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Open/Closed","MinWidth","55")
+
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Close","Caption","Close")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Close","HeaderFontBold",True)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Close","Readonly",false)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Close","AllowEdit",true)
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Close","MAXwidth","55")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Close","MinWidth","55")
+
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","JOB","visibleindex","0")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","SUFFIX","visibleindex","1")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","SEQ","visibleindex","2")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","DESCRIPTION","visibleindex","3")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","SUN_HRS","visibleindex","4")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Open/Closed","visibleindex","5")
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","Close","visibleindex","6")
+
+gui.F_Timesheet.GCGTimesheet.SetColumnProperty("TIMESHEETGRID","UPDATED","Visible",false)
+
+gui.F_Timesheet.cmdAdd.Enabled(True)
+gui.F_Timesheet.cmdClose.Enabled(True)
+gui.F_Timesheet.cmdUpdate.Enabled(True)
+gui.F_Timesheet.cmdSave.Enabled(True)
+gui.F_Timesheet.cmdTemp.Enabled(True)
+
+'loop through and flag all the rows that have been updated- all will be locked b/c we cannot lock on cell level
+F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.TIMESHEETGRID.rowcount--,1)
+	Function.Intrinsic.Control.If(V.DataTable.TIMESHEETGRID(V.Local.i).UPDATED!FieldVal, =, TRUE)
+		gui.F_Timesheet.GCGTimesheet.setrowappearance("TIMESHEETGRID",v.Local.i,"backcolor",v.Color.LtGray)
+		gui.F_Timesheet.GCGTimesheet.SetGridViewProperty("TIMESHEETGRID","ReadOnly","True") 
+		gui.F_Timesheet.GCGTimesheet.SetGridViewProperty("TIMESHEETGRID","Editable","False")
+		gui.F_Timesheet.cmdAdd.Enabled(False)
+		gui.F_Timesheet.cmdClose.Enabled(False)
+		gui.F_Timesheet.cmdUpdate.Enabled(False)
+		gui.F_Timesheet.cmdSave.Enabled(False)
+		gui.F_Timesheet.cmdTemp.Enabled(False)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i)
+
+gui.F_Timesheet.GCGTimesheet.MainView("TIMESHEETGRID")
+gui.F_Timesheet..Visible(True)
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("FormatGrid_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.FormatGrid.End
+
+Program.Sub.cmdClose_Click.Start
+F.Intrinsic.Control.SetErrorHandler("GridLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.i.Declare(long)
+v.Local.ssql.Declare(string)
+
+f.Intrinsic.UI.InvokeWaitDialog("Closing Sequences...")
+
+F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.TIMESHEETGRID.rowcount--,1)
+	f.Intrinsic.Control.If(v.datatable.TIMESHEETGRID(v.Local.i).Close.fieldvaltrim,=,True)
+		f.Intrinsic.String.Build("UPDATE JOB_OPERATIONS set FLAG_CLOSED = '{0}' where JOB = '{1}' and suffix = '{2}' and SEQ = '{3}'","Y",v.DataTable.TIMESHEETGRID(v.Local.i).JOB.fieldvaltrim,v.DataTable.TIMESHEETGRID(v.Local.i).SUFFIX.fieldvaltrim,v.DataTable.TIMESHEETGRID(v.Local.i).SEQ.fieldvaltrim,v.Local.ssql)
+		f.ODBC.Connection!con.Execute(v.Local.ssql)
+		f.Data.DataTable.SetValue("TIMESHEETGRID",v.Local.i,"Open/Closed","Closed")
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.control.Next(v.Local.i)
+
+f.Intrinsic.Control.CallSub(cmdrefresh_click)
+
+f.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GridLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdClose_Click.End
+
+Program.Sub.GsGTemp_RowClick.Start
+F.Intrinsic.Control.SetErrorHandler("TempList_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+V.Local.iTemp.Declare(Long)
+V.Local.iTemp.Set(v.args.rowindex)
+Gui.F_Template.txtTmpJob.Text(v.DataTable.TEMPLATE(v.args.rowindex).JOB.fieldvaltrim)
+Gui.F_Template.txtTmpSuff.Text(v.DataTable.TEMPLATE(v.Args.rowindex).SUFFIX.fieldvaltrim)
+Gui.F_Template.txtTmpSeq.Text(v.DataTable.TEMPLATE(v.Args.rowindex).SEQ.fieldvaltrim)
+
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("TempList_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_template_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.GsGTemp_RowClick.End
+
+Program.Sub.GCGTimesheet_CellValueChanged.Start
+F.Intrinsic.Control.SetErrorHandler("TempList_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+V.Local.fRet.Declare(Float)
+F.Data.DataTable.Compute("TIMESHEETGRID", "SUM(SUN_HRS)", "", V.Local.fRet)
+gui.F_Timesheet.txt_total.Text(V.Local.fRet)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("TempList_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.GCGTimesheet_CellValueChanged.End
+
+Program.Sub.GCGTimesheet_RowCellClick.Start
+F.Intrinsic.Control.SetErrorHandler("lvwtemp_itemclick_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+f.Intrinsic.Control.If(v.Args.column,=,"TODAY")
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.ElseIf(v.Args.column,=,"EMP_HRS")
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.Else
+	gui.F_Timesheet.txtAJob.Text(v.DataTable.TIMESHEETGRID(v.Args.rowindex).JOB.fieldvaltrim)
+	gui.F_Timesheet.txtASuff.Text(v.DataTable.TIMESHEETGRID(v.Args.rowindex).SUFFIX.fieldvaltrim)
+	gui.F_Timesheet.txtASeq.Text(v.DataTable.TIMESHEETGRID(v.Args.rowindex).SEQ.fieldvaltrim)
+f.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("lvwtemp_itemclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4430_Timesheet.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(f_timesheet_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.GCGTimesheet_RowCellClick.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$This project will read a file from a specific network path, create the web import file, then save the web import file in the designated file location. It will also create a new customer if the customer in the order does not exist.
+${$5$}$2.0.0.0$}$2
+${$6$}$dyunus$}$20201125153947829$}$xZ6SHi8g7O0Qsxe6AiO2NH3PnOKQRy0Tb/XtkQ4ntc537XS8hrzuqgYFuaTj/KOWC8u7//0G8Bs=
+Program.Sub.Comments.End
